@@ -1,0 +1,16 @@
+#attendenceList{
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    max-height: 70vh;
+    overflow: auto;
+    width: 70%;
+}
+#attendenceList th{
+    height: 50px;
+    font-family: 'Benne';
+    font-size: large;
+}
+#attendenceList>table{
+    margin: auto;
+    width: 100%;
+}

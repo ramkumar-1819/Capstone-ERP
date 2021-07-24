@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+.common_LibrarianBookSection{
+    display: flex;
+}
+#searchStudent{
+    font-family: 'Times New Roman', Times, serif;
+    width: 20vw;
+    margin: 25px;
+}
+#searchStudent>div{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+}
+#searchStudent label{
+    font-family: 'Benne';
+    font-weight: bold;
+    font-size: larger;
+}
+#studentsList{
+    margin: 25px;
+    width: 50vw;
+    max-height: 75vh;
+    overflow: auto;
+}
+#studentsList>table{
+    width: 100%;
+}
+#studentsList>table th{
+    font-family: 'Benne';
+    font-size: larger;
+    height: 50px;
+    position: sticky;
+    top:0;
+    background-color: white;
+    border-bottom: 2px dashed gray;
+}
+.view_issue_returnBook{
+    display: none;
+    width: 85%;
+}
+#librarianStudentDetails{
+    font-family: 'Lora', serif;
+    font-size: larger;
+    margin: 25px;
+}
+.common_bookTable{
+    width: 75vw;
+    margin: 25px auto 0;
+    max-height: 40vh;
+    overflow: auto;
+}
+.common_bookTable table{
+    width: 100%;
+}
+.common_bookTable table th{
+    font-family: 'Benne';
+    font-size: larger;
+    position: sticky;
+    top:0;
+    background-color: white;
+    border-bottom: 2px dashed gray;
+}
+.common_bookTable table input{
+    height: 30px;
+    padding-left: 5px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.bookName{
+    width: 400px;
+}
+#backButtonBook{
+    margin: 10px 25px;
+}
+#removeInput{
+    border: none;
+    outline: none;
+    background-color: white;
+    color: red;
+    font-size: larger;
+    cursor: pointer;
+}
+#alerterIssueBook{
+    font-family: 'Benne';
+}

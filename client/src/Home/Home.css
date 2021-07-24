@@ -1,0 +1,73 @@
+#home_page{
+    background: url('./homepage_bgi.jpg');
+    background-size:100% 100%;
+    width: 100%;
+    height:90vh;
+}
+#login_form{
+    font-family: 'Benne';
+    font-size: larger;
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid rgb(138, 136, 136);
+    background-color: white;
+    visibility: hidden;
+    position: relative;
+    top:100px;
+    left: 50px;
+}
+#login_form>h3{
+    text-align: center;
+}
+#login_form>div{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+#login_form input{
+    width: 275px;
+    height: 4vh;
+    margin: 5px;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+}
+#login_form input:focus{
+    outline: 2px solid rgb(197, 195, 195);
+}
+#login_alert{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+.homeloading_button{
+    width: 10%;
+    margin: 200px auto 0;
+}
+#submit_login{
+    width: 275px;
+    height: 5vh;
+    cursor: pointer;
+    display: block;
+    margin: 5px 10px 20px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    font-family:'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold;
+}
+@media screen and (max-width:550px){
+   #login_form{
+       left: 0;
+       margin: 0 10px;
+       width: auto;
+   }
+   #login_form>div{
+       align-items: center;
+   }
+   #submit_login{
+       margin: 25px auto;
+   }
+}

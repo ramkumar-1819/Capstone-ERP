@@ -1,0 +1,31 @@
+#StudentsViewMarksAttendence_Section{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#StudentsViewMarksAttendence_Section>div:first-child{
+    margin-top: 25px;
+}
+#StudentsViewMarksAttendence_Section label{
+    margin-left: 20px;
+    font-weight: bold;
+    font-family: 'Benne';
+    font-size: larger;
+}
+#marksList{
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    max-height: 70vh;
+    overflow: auto;
+    width: 70%;
+}
+#marksList th{
+    height: 50px;
+    font-family: 'Benne';
+    font-size: large;
+}
+#marksList>table{
+    margin: auto;
+    width: 100%;
+}

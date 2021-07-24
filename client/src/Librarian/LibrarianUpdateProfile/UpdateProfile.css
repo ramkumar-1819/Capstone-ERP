@@ -1,0 +1,30 @@
+#librariandp{
+    padding: 3px !important;
+    font-size: small !important;
+    border: 1px solid black;
+}
+#librarianUpdateform{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    align-items: center;
+}
+#librarianUpdateform input,textarea{
+    font-family: 'Times New Roman', Times, serif;
+     width: 30vw;
+     font-size: large;
+}
+#submitUpdateLibrarian{
+   position: relative;
+   right: 40px;
+}
+#librarianUpdateform textarea{
+    padding: 5px;
+    resize: vertical;
+}
+#librarianUpdateform label{
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Benne';
+}

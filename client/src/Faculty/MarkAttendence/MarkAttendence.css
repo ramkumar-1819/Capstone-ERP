@@ -1,0 +1,90 @@
+.facultyAttendenceLoading{
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top:200px;
+    left:500px;
+}
+.common_attendenceSection{
+    width: 85%;
+    height: 90vh;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+.common_attendenceForm{
+    font-family: 'Benne';
+    font-weight: bold;
+    font-size: larger;
+    width: 20%;
+    height: auto;
+    overflow: auto;
+    margin: 25px;
+}
+.common_attendenceForm div{
+    display: flex;
+    flex-direction: column;
+}
+.common_attendenceForm input select{
+    color: black;
+    width: 100%;
+}
+#markAttendence{
+    width: 80%;
+    padding-top: 25px;
+}
+#submitAttendence select{
+    width: 20%;
+    align-self: center;
+    margin: 20px 0;
+}
+#submitAttendence{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#attendenceTable{
+   max-height: 70vh !important;
+   overflow: auto !important;
+}
+#attendenceTable table th{
+    height: 7vh;
+}
+#attendenceAlertmsg{
+    font-family: 'Benne';
+    margin: 5px 0;
+}
+
+#attendenceDetail{
+    margin: 20px auto;
+    max-height: 90%;
+    overflow: auto;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+}
+#attendenceDetail div:first-child{
+    margin: 10px 0 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+#attendenceDetail table{
+    width: 100%; 
+}
+#attendenceDetail th,td,#attendenceDetail table{
+    border-bottom: 1px dotted gray;
+    border-collapse: collapse;
+    padding: 7px;
+    text-align: center;
+}
+#attendenceDetail th{
+    font-family: 'Benne';
+}
+#showAttendencePage h2{
+    text-align: center;
+    font-family: 'Benne';
+    margin-top: 100px;
+}
+#showAttendencePage{
+    width: 73%;
+}

@@ -1,0 +1,48 @@
+#resultTable{
+    max-height: 70vh !important;
+    overflow: auto !important;
+ }
+ #resultTable table th{
+     height: 7vh;
+ }
+ #resultAlertmsg{
+     font-family: 'Benne';
+     margin: 5px 0;
+ }
+ 
+ #resultDetail{
+     margin: 20px auto;
+     max-height: 75%;
+     overflow: auto;
+     font-family: 'Times New Roman', Times, serif;
+     width: 100%;
+ }
+ #resultDetail div:first-child{
+     margin: 10px 0 20px;
+     text-align: center;
+     font-weight: bold;
+     font-size: large;
+ }
+ #resultDetail table{
+     width: 100%; 
+ }
+ #resultDetail th,td,#resultDetail table{
+     border-bottom: 1px dotted gray;
+     border-collapse: collapse;
+     padding: 7px;
+     text-align: center;
+ }
+ #resultDetail th{
+     font-family: 'Benne';
+ }
+ #showResultPage h2{
+     text-align: center;
+     font-family: 'Benne';
+     margin-top: 100px;
+ }
+#showResultPage{
+     width: 73%;
+}
+#resultDetail input{
+    width: 35px;
+}

@@ -1,0 +1,36 @@
+#admin_addLibrarian{
+    font-family: 'Benne';
+    font-size: larger;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    overflow: auto !important;
+}
+#submit_addlibrarian{
+    height: 40px;
+    width: 120px;
+    font-family: 'Benne';
+    font-size: large;
+}
+#admin_addLibrarian input,select{
+    height: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    padding-left: 5px;
+}
+#admin_addLibrarian textarea{
+    resize:vertical;
+    height: 10vh;
+    width: 400px;
+}
+#admin_addLibrarian>div{
+    display: flex;
+    flex-direction: column;    
+    margin: 10px;
+    width: 400px;
+}

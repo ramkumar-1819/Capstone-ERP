@@ -1,0 +1,35 @@
+.logout_button{
+    font-size:x-large;
+    margin-right: 1%;
+    position: relative;
+}
+.mainpage_college_name{
+    margin-left: 5%;
+}
+.logout_button::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 0;
+    background-color: gray;
+    transition: all 0.3s ease-in-out;
+}
+.logout_button:hover{
+    cursor: pointer;
+    color: gray;
+}
+.logout_button:hover::before{
+    width: 100%;
+}
+@media screen and (max-width:850px){
+    .logout_button{
+        font-size: larger;
+    }
+}
+@media screen and (max-width:550px){
+    .logout_button{
+        font-size: small;
+    }
+}

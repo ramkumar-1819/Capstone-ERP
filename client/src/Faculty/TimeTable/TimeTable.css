@@ -1,0 +1,33 @@
+#AddTimeTable_Section{
+    width: 90%;
+    height: 90vh;
+    display: flex;
+}
+#addTimeTable_Form{
+    width: 25%;
+    margin: 25px auto;
+}
+#addTimeTable_Form div:first-child{
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Benne';
+    text-align: center;
+    text-decoration: underline;
+    margin: 10px 0;
+}
+#addTimeTable_Form input{
+    border: 1px solid gray;
+    margin: auto;
+    display: block;
+    height: 30px;
+    padding: 3px 0 0 5px;
+}
+#addTimeTable_Form div{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Benne';
+}
+#addTimeTable_Form label{
+    font-weight: bold;
+    font-size: large;
+}

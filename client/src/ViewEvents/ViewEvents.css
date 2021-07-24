@@ -1,0 +1,17 @@
+#event_section{
+    width: 70%;
+    margin: 20px auto;
+    max-height: 80vh;
+    overflow: auto;
+}
+.addEvent_tableSection{
+    width: 100%;
+}
+.addEvent_tableSection th{
+    height: 50px;
+}
+.addEvent_tableSection caption{
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Benne';
+}

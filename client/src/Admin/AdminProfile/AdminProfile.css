@@ -1,0 +1,75 @@
+.common_Section{
+    display: flex;
+    width: 85%;
+    max-height: 90vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    overflow: hidden;
+}
+.profile_DP{
+    display: block;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+}
+.user_info{
+    width: 200px;
+    height: 300px;
+    margin-right: 10px;
+}
+.loadingProfile{
+    width: 10%;
+}
+.username,.userid{
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    font-family:'Benne';
+}
+.updateProfile_inProfile{
+    text-decoration: none;
+    color: rgb(4, 180, 250);
+    display: block;
+    font-size: large;
+    text-align: center;
+}
+.updateProfile_inProfile:hover{
+    text-decoration: underline;
+}
+.userid{
+    font-size: larger;
+    font-family:'Roboto';
+    margin-bottom: 10px;
+}
+.userInfo{
+    border-collapse: collapse;
+    width: 50%;
+    height: 75vh;
+    border: 2px dashed #808080;
+    font-size: large;
+    overflow: auto;
+}
+.userInfo td,th{
+    border-bottom: 1px dashed gray;
+    text-align: center;
+}
+.userInfo th{
+    padding-left: 10px;
+    font-family: 'Benne';
+}
+@media screen and (max-width:850px){
+    .common_Section{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+    }
+    .userInfo{
+        width: 100%;
+        height: auto;
+    }
+    .user_info{
+        margin: 10px 0;
+    }
+}

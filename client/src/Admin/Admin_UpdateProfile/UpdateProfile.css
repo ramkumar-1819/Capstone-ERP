@@ -1,0 +1,79 @@
+.common_UpdateProfileForm>div{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.common_UpdateProfileForm{
+    margin: auto;
+    width: 30vw;
+}
+.loadingUpdate_Profile{
+    position: relative;
+    top:200px;
+    margin: auto;
+    width: 10%;
+}
+.common_UpdateProfileForm input{
+    margin: 10px 0;
+    height: 30px;
+    padding: 5px;
+    font-size: medium;
+}
+.common_UpdateProfileSection{
+    font-family: 'Benne';
+    font-size: large;
+    width: 70%;
+    height: 90vh;
+    overflow: hidden;
+    margin: auto;
+    align-self: center;
+}
+#admindp{
+    padding: 3px !important;
+    font-size: small !important;
+    border: 1px solid black;
+}
+.common_submitButton{
+    width: 100px;
+    height: 25px;
+    margin: 10px auto;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: block;
+}
+.alert_msg{
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+@media screen and (max-width:850px){
+    .common_UpdateProfileSection{
+        width: 100%;
+    }
+    .common_UpdateProfileForm{
+        margin: auto;
+        width: 70%;
+    }
+    .common_UpdateProfileForm>div{
+        margin:5px;
+    }
+    .common_UpdateProfileForm input{
+        margin: 5px 0;
+    }
+}
+@media screen and (max-width:650px){
+    
+    .common_UpdateProfileForm>div{
+        margin:10px;
+    }
+    .common_UpdateProfileForm{
+        width: 100%;
+    }
+    .common_UpdateProfileSection{
+        position: relative;
+        right:50px;
+    }
+}

@@ -1,0 +1,169 @@
+import React, { Component,useEffect,useState } from 'react';
+import './ReturnBook.css';
+import axios from 'axios';
+import ReturnBookPage from './ReturnBookPage';
+
+export default function ReturnBook(){
+    //semester - hold sem values based on year.
+    //section - hold all the sections based on year,department,sem.
+    //student - list of students.
+    //selectedStudent - student selected to return a book.
+    const[semester,setSemester]=useState([])
+    const[section,setSection]=useState([])
+    const[students,setStudents]=useState([])
+    const[selectedStudent,setSelectedStudent]=useState("")
+    //This UseEffect is used to change color of current Route in Navigation Bar.
+    useEffect(()=>{
+        const Librarian_Navlinks=document.getElementById('Librarian_navbar').children;
+        for(const links of Librarian_Navlinks){
+            links.style.color='white';
+        }
+        Librarian_Navlinks[4].style.color='gray';
+    },[])
+    //getSemester() - used to get the sem values based on year.
+    const getSemester=(e)=>{
+        const sem=Number(e.target.value)+(Number(e.target.value)-1);
+        document.getElementById('Semester').value='Select Semester';
+        document.getElementById('section').value='Select Section';
+        setSemester([sem,sem+1])
+        setSection([])
+    }
+    //getSection() - used to get sections base on dept,year,sem.
+    const getSection=(e)=>{
+        const studentDepartment=document.getElementById('department').value;
+        const studentYear=document.getElementById('year').value;
+        axios.get(`http://localhost:8080/getSections/${studentDepartment}/${studentYear}/${e.target.value}`)
+            .then(section=>{
+                setSection(section.data)
+                document.getElementById('section').value='Select Section';
+            })
+            .catch(err=>{
+                alert(err.response.data)
+            })
+    }
+    //searchStudents() - get list of students based on sept,year,sem.
+    const searchStudents=(e)=>{
+        e.preventDefault();
+        const department=document.getElementById('department');
+        const year=document.getElementById('year');
+        const semester=document.getElementById('Semester');
+        const section=document.getElementById('section');
+        const alerter=document.getElementById('returnBookAlert');
+        alerter.innerHTML="";
+        if(department.value==='Select Department'){
+            alerter.innerHTML='Select Department'
+            return
+        }
+        if(year.value==='Select Year'){
+            alerter.innerHTML='Select Year';
+            return
+        }
+        if(semester.value==='Select Semester'){
+            alerter.innerHTML='Select Semester';
+            return
+        }
+        if(section.value==='Select Section'){
+            alerter.innerHTML='Select Section';
+            return
+        }
+        axios.post('http://localhost:8080/getStudents',{
+            department:department.value,
+            year:year.value,
+            semester:semester.value,
+            section:section.value
+        })
+        .then(students=>{
+            setStudents(students.data)
+        })
+        .catch(err=>alert(err.response.data))
+    }
+    //returnBookSection() - used to select the student and shown the returnBook page .
+    const returnBookSection=(student)=>{
+        setSelectedStudent(student)
+        document.getElementById('returnBookSection').style.display='none';
+        document.getElementById('returnBookPage').style.display='block';
+    }
+    return(
+        <>
+        <div id='returnBookSection' className='common_LibrarianBookSection'>
+            <form id='searchStudent' onSubmit={searchStudents}>
+                <div>
+                    <label htmlFor="department">Select Department</label>
+                    <select id="department" defaultValue='Select Department'>
+                        <option value="Select Department" disabled>Select Department</option>
+                        <option value="BioTech">BioTech</option>
+                        <option value="Civil">Civil</option>
+                        <option value="C.S.E">C.S.E</option>
+                        <option value="E.C.E">E.C.E</option>
+                        <option value="E.E.E">E.E.E</option>
+                        <option value="IT">IT</option>
+                        <option value="Mech">Mech</option>
+                        <option value="M.B.A">M.B.A</option>
+                    </select>
+                </div>
+                <div>
+                    <label htmlFor="year">Select Year</label>
+                    <select id='year' defaultValue='Select Year' onChange={getSemester}>
+                        <option value="Select Year" disabled>Select Year</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div>
+                    <label htmlFor="Semester">Select Semester</label>
+                    <select id="Semester" defaultValue='Select Semester' onChange={getSection}>
+                        <option value="Select Semester" disabled>Select Semester</option>
+                        {semester.map((sem,index)=><option key={index} value={sem}>{sem}</option>)}
+                    </select>
+                </div>
+                <div>
+                    <label htmlFor='section'>Select Section</label>
+                    <select id='section' defaultValue='Select Section'>
+                        <option value="Select Section" disabled>Select Section</option>
+                        {section.map((data,index)=>{
+                            return(
+                               <option key={index} value={data}>{data}</option>
+                            )
+                        })}
+                    </select>
+                </div>
+                <div>
+                    <div className='alert_msg' id='returnBookAlert'></div>
+                    <button type='submit' className='common_submitButton'>SEARCH</button>
+                </div>
+            </form>
+            {students.length>0 &&
+                <div id='studentsList'>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>S.no</th>
+                                <th>Register Number</th>
+                                <th>Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {students.map((student,index)=>{
+                                return(
+                                    <tr key={index}>
+                                        <td>{index+1}</td>
+                                        <td>{student.register_number}</td>
+                                        <td>{student.name}</td>
+                                        <td><button type='button' className='common_submitButton' onClick={()=>returnBookSection(student)}>Return Book</button></td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+        <div id='returnBookPage' className='view_issue_returnBook'>
+            <ReturnBookPage student={selectedStudent}/>
+        </div>
+        </>
+    )
+}

@@ -1,0 +1,57 @@
+#resultSection{
+    width: 85%;
+    display: flex;
+}
+.facultyResultLoading{
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    margin: auto;
+    left: 55%;
+    top:40%;
+}
+#showAddResultForm{
+    width: 100%;
+    height: auto;
+}
+#showAddResultForm form{
+    width: 40%;
+    margin: 20px auto 0;
+}
+#showAddResultForm div{
+    display: flex;
+    flex-direction: column;
+}
+#showAddResultForm label{
+    font-family: 'Benne';
+    font-size: large;
+    font-weight: bold;
+    margin: 2px;
+}
+#showAddResultForm input,select{
+    height: 25px;
+    padding-left: 5px;
+}
+#studentsMarkEntry{
+    width: 80%;
+    max-height: 40vh;
+    overflow: auto;
+    margin: 5px auto 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+#studentsMarkEntry th{
+    font-family:'Benne';
+    height: 50px;
+    font-weight: bold;
+    font-size: large;
+}
+#marksAlertmsg{
+    font-family: 'Benne';
+}
+#studentNote{
+    text-align: center;
+    font-family: 'Benne';
+    font-size: large;
+    font-weight: bolder;
+    margin-top: 5px;
+}

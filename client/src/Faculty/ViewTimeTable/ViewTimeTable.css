@@ -1,0 +1,63 @@
+#ViewTimeTable_Section{
+    width: 90%;
+    height: 90vh;
+    display: flex;
+}
+#viewTimeTable_Form{
+    width: 25%;
+    margin: 25px;
+}
+#viewTimeTable_Form div:first-child{
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Benne';
+    text-align: center;
+    text-decoration: underline;
+    margin: 10px 0;
+}
+#viewTimeTable_Form input{
+    border: 1px solid gray;
+    margin: auto;
+    display: block;
+    height: 30px;
+    padding: 3px 0 0 5px;
+}
+#viewTimeTable_Form div{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Benne';
+}
+#viewTimeTable_Form label{
+    font-weight: bold;
+    font-size: large;
+}
+#view{
+    margin: 25px;
+}
+#view>h1{
+    text-align: center;
+    font-family: 'Benne';
+}
+#timeTables{
+    padding: 10px;
+    width: 500px;
+    max-height: 70vh;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+#timeTables>div,#timeTables>button{
+    margin: 0 25px;
+}
+#timeTables>a{
+    text-decoration: underline;
+    color: rgb(0, 162, 255);
+}
+#emptyTimeTable{
+    width: 50vw;
+    margin-top: 100px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Benne';
+}

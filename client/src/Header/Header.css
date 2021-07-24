@@ -1,0 +1,86 @@
+/*styling the header section with responsive*/
+#header{
+    font-family: 'Benne';
+    height: 10vh;
+    background-color:black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.college_logo{
+    width:50px;
+    height: 75%;
+    margin-left: 70px;
+    border-radius: 50%;
+}
+.login_button{
+    position: relative;
+    width:150px;
+    font-size: x-large;
+    cursor: pointer;
+}
+.login_button:hover{
+    color: grey;
+}
+.college_name{
+    font-size:xx-large;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+#login_members{
+    position: absolute;
+    top:7vh;
+    right: 2%;
+    width: 125px;
+    text-indent: 5px;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    background-color: white;
+    display: none;
+    cursor: pointer;
+}
+.show{
+    display: block !important;
+}
+.changecolor{
+    color: gray !important;
+}
+#login_members>div:hover{
+    background-color: grey;
+}
+@media screen and (max-width: 850px) {
+    .college_name{
+        font-size: large;
+    }
+    .login_button{
+        margin-right: 5px;
+        width: auto;
+        font-size: large;
+    }
+    #login_members{
+        right: -5px;
+    }
+    .college_logo{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width:600px){
+    .college_name{
+        text-align: center;
+        font-size: small;
+    }
+    .college_logo{
+        margin-left: 0;
+        width: 50px;
+    }
+    .login_button{
+        width: auto;
+        font-size: medium;
+    }
+    #login_members{
+        z-index: 1;
+        border: 1px solid black;
+    }
+}

@@ -1,0 +1,30 @@
+#studentdp{
+    padding: 3px !important;
+    font-size: small !important;
+    border: 1px solid black;
+}
+#studentUpdateform{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    align-items: center;
+}
+#studentUpdateform input,textarea{
+    font-family: 'Times New Roman', Times, serif;
+     width: 30vw;
+     font-size: large;
+}
+#submitUpdateStudent{
+   position: relative;
+   right: 40px;
+}
+#studentUpdateform textarea{
+    padding: 5px;
+    resize: vertical;
+}
+#studentUpdateform label{
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Benne';
+}

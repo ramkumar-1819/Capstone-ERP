@@ -1,0 +1,25 @@
+#removeInput{
+    border: none;
+    outline: none;
+    background-color: white;
+    color: red;
+    font-size: larger;
+}
+#alerterViewBook{
+    font-family: 'Benne';
+}
+#studentBookList input{
+    height: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+.viewBookCode,.viewBookreturnDate{
+    width:150px ;
+}
+.viewBookName{
+    width: 25vw;
+    text-align: center;
+}
+.viewBookCode{
+    text-align: center;
+}

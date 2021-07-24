@@ -1,0 +1,42 @@
+#Admin_addStudent_Section{
+    overflow: auto;
+}
+#admin_addStudent{
+    font-family: 'Benne';
+    font-size: larger;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    overflow: auto !important;
+}
+#submit_addstudent{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  height: 40px;
+  width: 120px;
+}
+.addstudent_alert_button{
+    text-align: center;
+}
+#admin_addStudent input,select{
+    height: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    padding-left: 5px;
+}
+#admin_addStudent textarea{
+    resize:vertical;
+    height: 10vh;
+    width: 400px;
+    padding-left: 5px;
+}
+#admin_addStudent>div{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 400px;
+}

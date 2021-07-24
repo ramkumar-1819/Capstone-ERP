@@ -1,0 +1,96 @@
+#Subjects_Section{
+    width: 85%;
+    max-height: 90vh;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+}
+.subjects_navlinks{
+    width: 99%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+}
+.subjects_navlinks button{
+    width: 100px;
+    height: 35px;
+    margin: 0 5px;
+}
+.subjects_navlinks a{
+    text-decoration: none;
+}
+#addSubjects_Section input{
+    padding-left: 5px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+#view_subjects_section{
+    display: flex;
+}
+#viewSubjects_Form{
+    font-family: 'Benne';
+    font-weight: bold;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 20%;
+    height: 45vh;
+    margin:0 20px;
+}
+#subjects_list{
+    width: 70%;
+    max-height: 75vh;
+    overflow: auto;
+    margin: 10px;
+}
+#subject_list_table{
+    display: table;
+    border: 1px dotted gray;
+    text-align: center;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+#subject_list_table th{
+    font-family: 'Benne';
+    font-size: larger;
+    position: sticky;
+    top:-1px;
+    background-color: white;
+    height: 10vh;
+}
+#subject_list_table th,td{
+    padding: 10px;
+    border-bottom: 1px dotted gray;
+}
+#subject_list_table th,td,#subject_list_table{
+    border-collapse: collapse;
+}
+#editSubjects{
+    display: none;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top:0;
+    background-color: white;
+}
+#editSubject_form{
+    right: 350px;
+}
+#addSubjects_Section{
+    width: 50%;
+    margin: 0 auto;
+    overflow: auto;
+}
+#addSubjects_Section div{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Benne';
+    font-size: large;
+    font-weight: bold;
+    margin: 5px;
+}
+#addSubjects_Section input,select{
+    height: 30px;
+}
