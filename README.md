@@ -17,4 +17,4 @@ CONCLUSION :
                       This Project is Completely built using MERN stack.
                       FRONTEND - REACT JS , CSS.
                       BACKEND  - NODE JS , EXPRESS JS.
-                      DATABASE - MONGODB [MONGOOSE].
+                      DATABASE - MONGODB [MONGOOSE] .
